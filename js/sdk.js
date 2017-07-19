@@ -41,7 +41,7 @@ self.addEventListener('fetch', event => {
 		
 	}
 	
-	if ( event.request.url.indexOf('/wp-admin') !== -1 || event.request.url.indexOf('/wp-includes') !== -1 || event.request.url.indexOf('preview=true') !== -1 ) {
+	if ( event.request.url.indexOf('/wp-json') !== -1 || event.request.url.indexOf('/wp-admin') !== -1 || event.request.url.indexOf('/wp-includes') !== -1 || event.request.url.indexOf('preview=true') !== -1 ) {
     	
     	return;
     	
@@ -72,7 +72,7 @@ self.addEventListener('fetch', event => {
       				
       			})
       			.catch(() => cachePromise),
-      		wait(100).then(() => cachePromise).then(r => r || fetchPromise)
+      		wait(50).then(() => cachePromise).then(r => r || fetchPromise)
     	])
 		
 	);

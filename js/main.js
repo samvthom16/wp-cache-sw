@@ -1,13 +1,18 @@
 
 
 if ('serviceWorker' in navigator) {
+	
+	// console.log( wp_sw_cache_settings );
+	
+	// var settings = wp_sw_cache_settings;
+	
 	window.addEventListener('load', function() {
 	
-		if( settings['sw_enable'] == '1' ){
+		if( wp_sw_cache_settings['sw_enable'] == '1' ){
 			
 			
 			
-    		navigator.serviceWorker.register(settings['sw_js_url']).then(function(registration) {
+    		navigator.serviceWorker.register(wp_sw_cache_settings['sw_js_url']).then(function(registration) {
       			// Registration was successful
       			console.log('ServiceWorker registration successful with scope: ', registration.scope);
     		}, function(err) {

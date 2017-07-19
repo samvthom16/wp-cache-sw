@@ -68,15 +68,16 @@
     	
     	function enqueue_script(){
     		
-    		$js_url = $this->get_js_url();
+			$js_url = $this->get_js_url();
     		
-    		wp_enqueue_script('sw-cache', $js_url . 'main.js', array(), '2.0');
+    		wp_enqueue_script('sw-cache', $js_url . 'main.js', array(), '2.0.1');
     		
     		$sw_url = $js_url . 'sdk.js?v=1';
 		
 			$url = site_url('service-worker.js') . "?file=" . $sw_url;
     		
-    		wp_localize_script('sw-cache', 'settings', array( 
+			
+    		wp_localize_script('sw-cache', 'wp_sw_cache_settings', array( 
 			
 				'sw_js_url'	=> $url,
 			
