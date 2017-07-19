@@ -3,7 +3,7 @@
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', function() {
 	
-		if( settings['sw_enable'] ){
+		if( settings['sw_enable'] == '1' ){
 			
 			
 			
