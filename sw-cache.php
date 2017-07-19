@@ -1,6 +1,6 @@
 <?php
    /*
-   Plugin Name: Offline Cache
+   Plugin Name: WP SW Offline Cache
    Plugin URI: 
    Description: A plugin to enhance offline capabilities using a service worker
    Version: 1.0
@@ -19,8 +19,11 @@
 		
 		
 		wp_localize_script('sw-cache', 'settings', array( 
+			
 			'sw_js_url'	=> $url,
+			
 			'sw_enable'	=> true
+			
 		));
 	});
 
