@@ -27,7 +27,7 @@ function promiseAny(promises) {
 
 self.addEventListener('install', event => {
 	
-	console.log('Worker: has been successfully installed');
+	console.log('Worker: has been successfully installed v6 ');
 	
 	event.waitUntil( self.skipWaiting() );
   	
@@ -72,7 +72,7 @@ self.addEventListener('fetch', event => {
       				
       			})
       			.catch(() => cachePromise),
-      		wait(50).then(() => cachePromise).then(r => r || fetchPromise)
+      		wait(1).then(() => cachePromise).then(r => r || fetchPromise)
     	])
 		
 	);
