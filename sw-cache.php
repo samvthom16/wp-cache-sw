@@ -70,9 +70,9 @@
     		
 			$js_url = $this->get_js_url();
     		
-    		wp_enqueue_script('sw-cache', $js_url . 'main.js', array('jquery'), '3.0.3');
+    		wp_enqueue_script('sw-cache', $js_url . 'main.js', array('jquery'), '3.3.9');
     		
-    		$sw_url = $js_url . 'sdk.js?v=5';
+    		$sw_url = $js_url . 'sdk.js?v=6';
 		
 			$url = site_url('service-worker.js') . "?file=" . $sw_url;
     		
